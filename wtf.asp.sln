@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26403.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "wtf.asp", "src\wtf.asp\wtf.asp.csproj", "{D196D3B0-4233-4481-811A-3A5D49BCC6F7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{D13D9A44-EDD3-4AD7-9BC9-62BBC36E2C2E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{4E395B18-A2AE-437F-8EE3-59D016A135EF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "wtf.asp.tests", "test\wtf.asp.tests\wtf.asp.tests.csproj", "{CD1A37CE-2189-48AF-B7FD-3959BFA71995}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D196D3B0-4233-4481-811A-3A5D49BCC6F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D196D3B0-4233-4481-811A-3A5D49BCC6F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D196D3B0-4233-4481-811A-3A5D49BCC6F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D196D3B0-4233-4481-811A-3A5D49BCC6F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD1A37CE-2189-48AF-B7FD-3959BFA71995}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD1A37CE-2189-48AF-B7FD-3959BFA71995}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD1A37CE-2189-48AF-B7FD-3959BFA71995}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD1A37CE-2189-48AF-B7FD-3959BFA71995}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D196D3B0-4233-4481-811A-3A5D49BCC6F7} = {D13D9A44-EDD3-4AD7-9BC9-62BBC36E2C2E}
+		{CD1A37CE-2189-48AF-B7FD-3959BFA71995} = {4E395B18-A2AE-437F-8EE3-59D016A135EF}
+	EndGlobalSection
+	GlobalSection(CodealikeProperties) = postSolution
+		SolutionGuid = 1206154a-edf7-4a00-be90-0cb0ae054df8
+	EndGlobalSection
+EndGlobal
