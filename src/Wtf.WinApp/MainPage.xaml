@@ -10,12 +10,20 @@
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" RequestedTheme="Dark">
         <TextBox x:Name="TextBox1" Margin="96,0,232,94" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Bottom"
                  RenderTransformOrigin="1.641,-0.578" HorizontalContentAlignment="Left" />
-        <TextBox x:Name="LogViewer" ScrollViewer.VerticalScrollBarVisibility="Visible"
-                 Margin="96,111,95,152" TextWrapping="Wrap" Text="Waiting for data" RenderTransformOrigin="0.5,0.5"
-                FontSize="16" 
-                 ScrollViewer.HorizontalScrollBarVisibility="Auto" Foreground="#FFF8F8F2" FocusVisualPrimaryBrush="#FF49483E" FontFamily="Consolas"  
-               />
-        <Button Content="Add File" HorizontalAlignment="Right" Margin="0,0,111,84" VerticalAlignment="Bottom"
+
+        <ScrollViewer Width="Auto" VerticalScrollBarVisibility="Visible" VerticalScrollMode="Enabled"
+                      
+                      Margin="96,148,95,194">
+
+            <RichTextBlock x:Name="LogViewer" ScrollViewer.VerticalScrollBarVisibility="Visible"
+                           Margin="12,12,12,12" TextWrapping="Wrap" RenderTransformOrigin="0.5,0.5"
+                           FontSize="15"
+                           ScrollViewer.HorizontalScrollBarVisibility="Auto" Foreground="#FFF8F8F2"
+                           FocusVisualPrimaryBrush="#FF49483E" FontFamily="Consolas">
+                <Paragraph x:Name="Placeholder">Waiting for data</Paragraph>
+            </RichTextBlock>
+        </ScrollViewer>
+        <Button Content="Add File" HorizontalAlignment="Right" Margin="0,0,95,94" VerticalAlignment="Bottom"
                 Click="Button_Click" />
         <TextBlock x:Name="Title" HorizontalAlignment="Left" Margin="40,37,0,0" TextWrapping="Wrap" Text="Select File"
                    VerticalAlignment="Top" Style="{StaticResource TitleTextBlockStyle}" />
@@ -39,5 +47,3 @@
     </Style>-->
 
 </Page>
-    
-    

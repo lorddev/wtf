@@ -10,6 +10,7 @@ using Windows.Storage.Pickers;
 using Windows.UI.Core;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Documents;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -60,9 +61,10 @@ namespace Wtf.WinApp
             }
             else
             {
-                TextBox1.Text = "Operation cancelled.";
+                TextBox1.Text = "Operation canceled.";
             }
         }
+
 
         private async Task ReadFileAsync(string fileName)
         {
@@ -71,13 +73,26 @@ namespace Wtf.WinApp
                 Task.Yield();
                 var bytes = ReadFile(fileName);
 
-                await CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(CoreDispatcherPriority.Normal,
-                    () =>
+                await UpdateUI(() =>
+                {
+                    // Your UI update code goes here!
+                    if (LogViewer.Blocks.Contains(Placeholder))
                     {
-                        // Your UI update code goes here!
-                        LogViewer.Text = Encoding.UTF8.GetString(bytes);
-                    });
+                        LogViewer.Blocks.Remove(Placeholder);
+                    }
+                    LogViewer.IsTextSelectionEnabled = true;
+
+                    var p = new Paragraph();
+                    p.Inlines.Add(new Run { Text = Encoding.UTF8.GetString(bytes) });
+                    LogViewer.Blocks.Add(p);
+                });
             });
+        }
+
+        private async Task UpdateUI(DispatchedHandler action)
+        {
+            await CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(CoreDispatcherPriority.Normal,
+                action);
         }
 
 
