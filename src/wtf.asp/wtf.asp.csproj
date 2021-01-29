@@ -9,7 +9,7 @@
     <PackageReference Include="AngularJS" Version="1.6.3" />
     <PackageReference Include="Devlord.Utilities" Version="5.0.123" />
     <PackageReference Include="Elmah.Io.Extensions.Logging" Version="3.1.22-pre" />
-    <PackageReference Include="log4net" Version="2.0.8" />
+    <PackageReference Include="log4net" Version="2.0.10" />
     <PackageReference Include="Loggr.Extensions.Logging" Version="1.0.1" />
     <PackageReference Include="Microsoft.AspNetCore" Version="1.1.1" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="1.1.2" />
